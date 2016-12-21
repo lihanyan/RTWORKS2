@@ -96,3 +96,4 @@ void CRobotic::Trajectory_Generator()
 void CRobotic::Display()
 {
 	//根据击球器的位置、大小、颜色，实时显示画面
+}
