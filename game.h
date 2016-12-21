@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once
 
 #include <opencv2\opencv.hpp>
@@ -11,14 +12,14 @@
 #include <native/timer.h>
 
 
-//ÇòÀà
+//çƒç±»
 class CBall
 {
 public:
 	float x;
-	float y;//ÇòµÄÎ»ÖÃ×ø±ê
+	float y;//çƒçš„ä½ç½®åæ ‡
 	float vx;
-	float vy;//ÇòµÄËÙ¶È´óĞ¡
+	float vy;//çƒçš„é€Ÿåº¦å¤§å°
 
 	void Init();
 	void getBallState();
@@ -26,15 +27,15 @@ public:
 	void Display();
 
 private:
-	Scalar color;//ÇòµÄÑÕÉ«
-	int diameter;//ÇòµÄÖ±¾¶
-	float m;//ÇòµÄÖÊÁ¿
+	Scalar color;//çƒçš„é¢œè‰²
+	int diameter;//çƒçš„ç›´å¾„
+	float m;//çƒçš„è´¨é‡
 };
 
 
 void CBall::Init()
 {
-	//ÇòµÄ³õÊ¼»¯º¯Êı£¬¸ø²ÎÊı¸³³õÖµ
+	//çƒçš„åˆå§‹åŒ–å‡½æ•°ï¼Œç»™å‚æ•°èµ‹åˆå€¼
 	x = 0; y = 0; vx = 0; vy = 0;
 	color = (0, 0, 255);
 	diameter = 10;
@@ -43,21 +44,21 @@ void CBall::Init()
 
 void CBall::getBallState()
 {
-	//»ñÈ¡ÇòµÄµ±Ç°×´Ì¬£¬°üÀ¨Î»ÖÃºÍËÙ¶È
+	//è·å–çƒçš„å½“å‰çŠ¶æ€ï¼ŒåŒ…æ‹¬ä½ç½®å’Œé€Ÿåº¦
 }
 
 void CBall::Collision()
 {
-	//¸ù¾İÇòºÍ»÷ÇòÆ÷µÄÎ»ÖÃËÙ¶È£¬µÃµ½ÇòÅö×²ºóµÄ×´Ì¬
+	//æ ¹æ®çƒå’Œå‡»çƒå™¨çš„ä½ç½®é€Ÿåº¦ï¼Œå¾—åˆ°çƒç¢°æ’åçš„çŠ¶æ€
 }
 
 void CBall::Display()
 {
-	//¸ù¾İÇòµÄÎ»ÖÃ×ø±ê¡¢ÑÕÉ«¡¢Ö±¾¶£¬ÊµÊ±ÏÔÊ¾±ùÇò
+	//æ ¹æ®çƒçš„ä½ç½®åæ ‡ã€é¢œè‰²ã€ç›´å¾„ï¼Œå®æ—¶æ˜¾ç¤ºå†°çƒ
 }
 
 
-//»úĞµÊÖÀà
+//æœºæ¢°æ‰‹ç±»
 class CRobotic
 {
 public:
@@ -80,20 +81,75 @@ private:
 
 void CRobotic::Init()
 {
-	//³õÊ¼»¯²ÎÊı
+	//åˆå§‹åŒ–å‚æ•°
 }
 
 void CRobotic::readCommand()
 {
-	//½ÓÊÜ²¢½âÎöÃüÁî£¬µÃµ½Ä¿±ê»÷ÇòµãºÍÄ¿±ê»÷ÇòËÙ¶È
+	//æ¥å—å¹¶è§£æå‘½ä»¤ï¼Œå¾—åˆ°ç›®æ ‡å‡»çƒç‚¹å’Œç›®æ ‡å‡»çƒé€Ÿåº¦
 }
 
 void CRobotic::Trajectory_Generator()
 {
-	//¸ù¾İÄ¿±ê»÷ÇòµãºÍÄ¿±ê»÷ÇòËÙ¶È£¬Éú³ÉÆ½»¬¹ì¼£¡£¹ì¼£²å²¹¿ÉÓÃÔÚÕâÀï
+	//æ ¹æ®ç›®æ ‡å‡»çƒç‚¹å’Œç›®æ ‡å‡»çƒé€Ÿåº¦ï¼Œç”Ÿæˆå¹³æ»‘è½¨è¿¹ã€‚è½¨è¿¹æ’è¡¥å¯ç”¨åœ¨è¿™é‡Œ
 }
 
 void CRobotic::Display()
 {
-	//¸ù¾İ»÷ÇòÆ÷µÄÎ»ÖÃ¡¢´óĞ¡¡¢ÑÕÉ«£¬ÊµÊ±ÏÔÊ¾»­Ãæ
+	//æ ¹æ®å‡»çƒå™¨çš„ä½ç½®ã€å¤§å°ã€é¢œè‰²ï¼Œå®æ—¶æ˜¾ç¤ºç”»é¢
+=======
+#pragma once
+
+#include <opencv2\opencv.hpp>
+#include <stdio.h>
+#include <signal.h>
+#include <unistd.h>
+#include <sys/nman.h>
+
+#include <native/task.h>
+#include <native/timer.h>
+
+
+class CBall
+{
+public:
+	float x;
+	float y;//çƒçš„ä½ç½®åæ ‡
+	float vx;
+	float vy;//çƒçš„é€Ÿåº¦å¤§å°
+
+	void Init();
+	void getBallState();
+	void Collision();
+	void Display();
+
+private:
+	Scalar color;//çƒçš„é¢œè‰²
+	int diameter;//çƒçš„ç›´å¾„
+	float m;//çƒçš„è´¨é‡
+};
+
+
+void CBall::Init()
+{
+	//çƒçš„åˆå§‹åŒ–å‡½æ•°ï¼Œç»™å‚æ•°èµ‹åˆå€¼
+	x = 0; y = 0; vx = 0; vy = 0;
+	color = (0, 0, 255);
+	diameter = 10;
+	m = 5;
+}
+
+void CBall::getBallState()
+{
+	//è·å–çƒçš„å½“å‰çŠ¶æ€ï¼ŒåŒ…æ‹¬ä½ç½®å’Œé€Ÿåº¦
+}
+
+void CBall::Collision()
+{
+	//æ ¹æ®çƒå’Œå‡»çƒå™¨çš„ä½ç½®é€Ÿåº¦ï¼Œå¾—åˆ°çƒç¢°æ’åçš„çŠ¶æ€
+}
+
+void CBall::Display()
+{
+	//æ ¹æ®çƒçš„ä½ç½®åæ ‡ã€é¢œè‰²ã€ç›´å¾„ï¼Œå®æ—¶æ˜¾ç¤ºå†°çƒ
 }
