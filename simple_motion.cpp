@@ -97,6 +97,7 @@ void task_trajectory_generator_proc(void *arg)
                         axis1_setpoint.Position += v*T;
                         printf("Position2:%f\n",axis1_setpoint.Position);
                   }
+		  //Decelerate
                   else if(axis1_setpoint.Position < p)
                  {
                         axis1_setpoint.Position += axis1_setpoint.Velocity*T;
